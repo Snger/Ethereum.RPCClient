@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{7DD6FD24-B1A9-47B4-A903-59D276877DC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Timemicro.Ethereum.RPCClient</RootNamespace>
+    <AssemblyName>Timemicro.Ethereum.RPCClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DTO\BlockDTO.cs" />
+    <Compile Include="DTO\TransactionDTO.cs" />
+    <Compile Include="DTO\TransactionReceiptDTO.cs" />
+    <Compile Include="JsonRPCClient.cs" />
+    <Compile Include="JsonRPCClientExtensions.cs" />
+    <Compile Include="JsonRPCRequestParams.cs" />
+    <Compile Include="JsonRPCMethods.cs" />
+    <Compile Include="JsonRPCRequest.cs" />
+    <Compile Include="JsonRPC.cs" />
+    <Compile Include="JsonRPCResponse.cs" />
+    <Compile Include="JsonRPCResponseError.cs" />
+    <Compile Include="Methods\BlockNumberParams.cs" />
+    <Compile Include="Methods\BlockNumberResponse.cs" />
+    <Compile Include="Methods\EstimateGasParams.cs" />
+    <Compile Include="Methods\GetTransactionByHashParams.cs" />
+    <Compile Include="Methods\GetTransactionByHashResponse.cs" />
+    <Compile Include="Methods\GetTransactionReceiptParams.cs" />
+    <Compile Include="Methods\GetTransactionReceiptResponse.cs" />
+    <Compile Include="Methods\GetAccountsParams.cs" />
+    <Compile Include="Methods\GetAccountsResponse.cs" />
+    <Compile Include="Methods\GetBalanceResponse.cs" />
+    <Compile Include="Methods\GetBalanceParams.cs" />
+    <Compile Include="Methods\GetBlockByHashParams.cs" />
+    <Compile Include="Methods\GetBlockByHashResponse.cs" />
+    <Compile Include="Methods\GetNewAccountParams.cs" />
+    <Compile Include="Methods\GetNewAccountResponse.cs" />
+    <Compile Include="Methods\GetBlockByNumberParams.cs" />
+    <Compile Include="Methods\GetBlockByNumberResponse.cs" />
+    <Compile Include="Methods\SendTransactionParams.cs" />
+    <Compile Include="Methods\SendTransactionResponse.cs" />
+    <Compile Include="Methods\UnlockAccountParams.cs" />
+    <Compile Include="Methods\UnlockAccountResponse.cs" />
+    <Compile Include="Utils\HexConvertors\Extensions\HexBigIntegerConvertorExtensions.cs" />
+    <Compile Include="Utils\HexConvertors\Extensions\HexByteConvertorExtensions.cs" />
+    <Compile Include="Utils\HexConvertors\Extensions\HexStringUTF8ConvertorExtensions.cs" />
+    <Compile Include="Utils\HexConvertors\HexBigIntegerBigEndianConvertor.cs" />
+    <Compile Include="Utils\HexConvertors\HexUTF8StringConvertor.cs" />
+    <Compile Include="Utils\HexConvertors\IHexConvertor.cs" />
+    <Compile Include="Utils\HexExtensions.cs" />
+    <Compile Include="Utils\HexTypes\HexBigInteger.cs" />
+    <Compile Include="Utils\HexTypes\HexType.cs" />
+    <Compile Include="Utils\HexTypes\HexTypeFactory.cs" />
+    <Compile Include="Utils\HexTypes\HexTypeJsonConverter.cs" />
+    <Compile Include="Utils\HexTypes\HexUTF8String.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.0.0\ref\netcoreapp2.0\System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

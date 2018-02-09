@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Timemicro.Ethereum.RPCClient</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCClient.cs">
+      <Link>JsonRPCClient.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCClientExtensions.cs">
+      <Link>JsonRPCClientExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCMethods.cs">
+      <Link>JsonRPCMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCRequest.cs">
+      <Link>JsonRPCRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCRequestParams.cs">
+      <Link>JsonRPCRequestParams.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCResponse.cs">
+      <Link>JsonRPCResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPCResponseError.cs">
+      <Link>JsonRPCResponseError.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\JsonRPC.cs">
+      <Link>JsonRPC.cs</Link>
+    </Compile>
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\DTO\BlockDTO.cs" Link="DTO\BlockDTO.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\DTO\TransactionDTO.cs" Link="DTO\TransactionDTO.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\DTO\TransactionReceiptDTO.cs" Link="DTO\TransactionReceiptDTO.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\BlockNumberParams.cs" Link="Methods\BlockNumberParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\BlockNumberResponse.cs" Link="Methods\BlockNumberResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetAccountsParams.cs" Link="Methods\GetAccountsParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetAccountsResponse.cs" Link="Methods\GetAccountsResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetBalanceParams.cs" Link="Methods\GetBalanceParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetBalanceResponse.cs" Link="Methods\GetBalanceResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetBlockByHashParams.cs" Link="Methods\GetBlockByHashParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetBlockByHashResponse.cs" Link="Methods\GetBlockByHashResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetBlockByNumberParams.cs" Link="Methods\GetBlockByNumberParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetBlockByNumberResponse.cs" Link="Methods\GetBlockByNumberResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\SendTransactionParams.cs" Link="Methods\SendTransactionParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\SendTransactionResponse.cs" Link="Methods\SendTransactionResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\UnlockAccountParams.cs" Link="Methods\UnlockAccountParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\UnlockAccountResponse.cs" Link="Methods\UnlockAccountResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetTransactionReceiptParams.cs" Link="Methods\GetTransactionReceiptParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetTransactionReceiptResponse.cs" Link="Methods\GetTransactionReceiptResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetTransactionByHashParams.cs" Link="Methods\GetTransactionByHashParams.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetTransactionByHashResponse.cs" Link="Methods\GetTransactionByHashResponse.cs" />
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetNewAccountParams.cs">
+      <Link>Methods\GetNewAddressParams.cs</Link>
+    </Compile>
+    <Compile Include="..\Timemicro.Ethereum.RPCClient\Methods\GetNewAccountResponse.cs">
+      <Link>Methods\GetNewAddressResponse.cs</Link>
+    </Compile>
+	
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexExtensions.cs" Link="Utils\HexExtensions.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexConvertors\Extensions\HexBigIntegerConvertorExtensions.cs" Link="Utils\HexConvertors\Extensions\HexBigIntegerConvertorExtensions.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexConvertors\Extensions\HexByteConvertorExtensions.cs" Link="Utils\HexConvertors\Extensions\HexByteConvertorExtensions.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexConvertors\Extensions\HexStringUTF8ConvertorExtensions.cs" Link="Utils\HexConvertors\Extensions\HexStringUTF8ConvertorExtensions.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexConvertors\HexBigIntegerBigEndianConvertor.cs" Link="Utils\HexConvertors\HexBigIntegerBigEndianConvertor.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexConvertors\HexUTF8StringConvertor.cs" Link="Utils\HexConvertors\HexUTF8StringConvertor.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexConvertors\IHexConvertor.cs" Link="Utils\HexConvertors\IHexConvertor.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexTypes\HexBigInteger.cs" Link="Utils\HexTypes\HexBigInteger.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexTypes\HexType.cs" Link="Utils\HexTypes\HexType.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexTypes\HexTypeFactory.cs" Link="Utils\HexTypes\HexTypeFactory.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexTypes\HexTypeJsonConverter.cs" Link="Utils\HexTypes\HexTypeJsonConverter.cs" />
+	<Compile Include="..\Timemicro.Ethereum.RPCClient\Utils\HexTypes\HexUTF8String.cs" Link="Utils\HexTypes\HexUTF8String.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+</Project>

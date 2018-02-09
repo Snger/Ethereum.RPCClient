@@ -1,0 +1,12 @@
+
+.DS_Store
+.idea
+.vs
+*.csproj.user
+*.userprefs
+
+/src/packages
+/src/*/bin
+/src/*/obj
+/src/UnitTests/*/bin
+/src/UnitTests/*/obj
